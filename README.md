@@ -9,8 +9,6 @@ Ensure python is installed<br>
 Using pip install command install the following packages:<br>
 <ul>flask</ul>
 <ul>flask_socketio</ul>
-<ul>sqllite3</ul>
-<ul>hashlib</ul>
 
 
 <img class="a" src="/static/group chat.png" height="300" width="500"> 
