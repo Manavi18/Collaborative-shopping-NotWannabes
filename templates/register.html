@@ -1,0 +1,110 @@
+<style>
+    .login-container{
+    background: rgba(245, 245, 245, 0.699);
+    border-radius: 6px;
+    height: 500px;
+    margin: 20px auto 0;
+    width: 400px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    transition:0.5s;
+}
+
+.t{
+    background: rgb(238, 176, 176);
+    border-radius: 6px;
+    height: 75px;
+    margin: 20px auto 0;
+    width: 400px;
+    position: absolute;
+    top: 1%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    transition:0.5s;
+
+}
+input{
+    width: 70%;
+    align-items: center;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    background-color:whitesmoke;
+}
+.user
+{
+    margin-top: 25%;
+    margin-left: 15%;
+    margin-bottom: 10%;
+    border-radius: 25%;
+}
+.pas
+{
+    margin-left: 15%;
+    border-radius: 25%;
+}
+.btn
+{
+    margin-left: 15%;
+    margin-top: 5%;
+}
+.textt
+{
+margin-left: 5%;
+position: absolute;
+align-items: center;
+margin-top: 5%;
+font-size: medium;
+
+}
+.btnbtn-default{
+    background: rgb(241, 228, 209);
+    border: 1px solid #42464b;
+    border-radius: 6px;
+    height: 50px;
+    margin: 20px auto 0;
+    width: 150px;
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    transition:0.5s;
+
+
+}
+</style>
+
+<body style="background-image: url('https://image.freepik.com/free-photo/pink-blue-leaves-pink-background-with-copyspace-top-side_24972-579.jpg');"></body>
+
+{% extends "common.html" %}
+{% block title %} Register {% endblock %}
+{% block content %}
+<div class = "login-container">
+    <div class="t">
+        <div class="textt">
+            <b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Get access to your Orders, <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Wishlist and chatrooms</b> 
+        </div>
+        
+    </div>
+    <form action="" method="post" >
+
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>
+        <br>
+        <br>
+        <p>Email:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="email" name="email"></p>
+        <p>Username: <input type="text" name="username"></p>
+        <P>Password: &nbsp;&nbsp;<input type="password" name="password" id="password" required></p>
+        <p>Phone:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    <input type="text" name="phone"></p>
+        <input class="btnbtn-default" type="submit" value="Register">
+    </form>
+
+    {% if error %}
+    <div class="textt">
+        <p><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Error:</strong> {{ error }}
+    </div>s
+    {% endif %}
+</div>
+{% endblock %}
+

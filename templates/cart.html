@@ -1,0 +1,54 @@
+{% extends "common.html" %}
+{% block title %} Group Cart {% endblock %}
+{% block content %}
+<style>
+    .section{
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+        
+    }
+
+    .friends{
+        width:33.33%;
+        height: 100px;
+        display:inline;
+        float:left;
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+        color: rgb(10, 10, 10);
+    }
+
+    .a{
+        text-align: center;
+    }
+
+    .ab{
+        text-align: center;
+    }
+    .abc{
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    }
+
+</style>
+
+<!-- A for loop to first iterate and display users from the customer_in_session list sent by server -->
+<!-- Another for loop to iterate and display products of the corresponding name else display cart is empty!-->
+
+<div class="section">
+    {% for customer in customer_in_session %}
+    <div class="friends"> 
+        <h3 class="a"><br>{{ customer }} </h3>
+    </div>
+    {% endfor %}
+
+    {% for i in range(length) %}
+    <div class="friends">
+        {% if testing[i][0] in customer_in_session %}
+            <img width="501" height="600" src="{{ testing[i][2] }}" class="abc"><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {{ testing[i][1] }} </div>
+        {% else %}
+            <h3 class="a"> <br>{{testing[i][0]}},{{customer_in_session[i]}}</h3>
+        {%  endif %}
+    </div>
+    {% endfor %}
+
+    
+</div>
+{% endblock %}
