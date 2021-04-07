@@ -13,3 +13,8 @@ Using pip install command install the following packages:<br>
 
 <img class="a" src="/static/group chat.png" height="300" width="500"> 
 <img class="a" src="/static/cart.png" height="300" width="500">
+<br>
+## Collaborators
+Manavi Marnad <br>
+Srishti Jena <br>
+Sunitee Jundre <br>
