@@ -44,7 +44,7 @@
         {% if testing[i][0] in customer_in_session %}
             <img width="501" height="600" src="{{ testing[i][2] }}" class="abc"><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {{ testing[i][1] }} </div>
         {% else %}
-            <h3 class="a"> <br>{{testing[i][0]}},{{customer_in_session[i]}}</h3>
+            <h3 class="a"> <br>Cart is empty!</h3>
         {%  endif %}
     </div>
     {% endfor %}
