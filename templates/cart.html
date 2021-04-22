@@ -29,23 +29,20 @@
 
 </style>
 
-<!-- A for loop to first iterate and display users from the customer_in_session list sent by server -->
 <!-- Another for loop to iterate and display products of the corresponding name else display cart is empty!-->
 
 <div class="section">
-    {% for customer in customer_in_session %}
+
+
+    {% for i in range(length) %}
     <div class="friends"> 
-        <h3 class="a"><br>{{ customer }} </h3>
+        <h3 class="a"><br>{{ sections[i] }} </h3>
     </div>
     {% endfor %}
 
     {% for i in range(length) %}
     <div class="friends">
-        {% if testing[i][0] in customer_in_session %}
-            <img width="501" height="600" src="{{ testing[i][2] }}" class="abc"><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {{ testing[i][1] }} </div>
-        {% else %}
-            <h3 class="a"> <br>Cart is empty!</h3>
-        {%  endif %}
+            <img width="501" height="600" src="{{ img[i][2:-2] }}" class="abc"><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {{ prod[i] }} </div>
     </div>
     {% endfor %}
 
